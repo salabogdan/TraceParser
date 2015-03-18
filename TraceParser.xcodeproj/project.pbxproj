@@ -8,6 +8,13 @@
 
 /* Begin PBXBuildFile section */
 		CC6AD8781AB978F5008FFCD3 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = CC6AD8771AB978F5008FFCD3 /* main.m */; };
+		CC6AD8881AB9791E008FFCD3 /* ImageExport.m in Sources */ = {isa = PBXBuildFile; fileRef = CC6AD87F1AB9791E008FFCD3 /* ImageExport.m */; };
+		CC6AD8891AB9791E008FFCD3 /* PFTTrackSegment.m in Sources */ = {isa = PBXBuildFile; fileRef = CC6AD8811AB9791E008FFCD3 /* PFTTrackSegment.m */; };
+		CC6AD88A1AB9791E008FFCD3 /* UIARun.m in Sources */ = {isa = PBXBuildFile; fileRef = CC6AD8831AB9791E008FFCD3 /* UIARun.m */; };
+		CC6AD88B1AB9791E008FFCD3 /* XRRun.m in Sources */ = {isa = PBXBuildFile; fileRef = CC6AD8851AB9791E008FFCD3 /* XRRun.m */; };
+		CC6AD88C1AB9791E008FFCD3 /* XRTrackSegment.m in Sources */ = {isa = PBXBuildFile; fileRef = CC6AD8871AB9791E008FFCD3 /* XRTrackSegment.m */; };
+		CC6AD88E1AB97933008FFCD3 /* AppKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CC6AD88D1AB97933008FFCD3 /* AppKit.framework */; };
+		CC6AD8941AB98986008FFCD3 /* Utils.m in Sources */ = {isa = PBXBuildFile; fileRef = CC6AD8931AB98986008FFCD3 /* Utils.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -25,6 +32,19 @@
 /* Begin PBXFileReference section */
 		CC6AD8741AB978F5008FFCD3 /* TraceParser */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = TraceParser; sourceTree = BUILT_PRODUCTS_DIR; };
 		CC6AD8771AB978F5008FFCD3 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		CC6AD87E1AB9791E008FFCD3 /* ImageExport.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ImageExport.h; sourceTree = "<group>"; };
+		CC6AD87F1AB9791E008FFCD3 /* ImageExport.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ImageExport.m; sourceTree = "<group>"; };
+		CC6AD8801AB9791E008FFCD3 /* PFTTrackSegment.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PFTTrackSegment.h; sourceTree = "<group>"; };
+		CC6AD8811AB9791E008FFCD3 /* PFTTrackSegment.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PFTTrackSegment.m; sourceTree = "<group>"; };
+		CC6AD8821AB9791E008FFCD3 /* UIARun.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = UIARun.h; sourceTree = "<group>"; };
+		CC6AD8831AB9791E008FFCD3 /* UIARun.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = UIARun.m; sourceTree = "<group>"; };
+		CC6AD8841AB9791E008FFCD3 /* XRRun.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XRRun.h; sourceTree = "<group>"; };
+		CC6AD8851AB9791E008FFCD3 /* XRRun.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = XRRun.m; sourceTree = "<group>"; };
+		CC6AD8861AB9791E008FFCD3 /* XRTrackSegment.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XRTrackSegment.h; sourceTree = "<group>"; };
+		CC6AD8871AB9791E008FFCD3 /* XRTrackSegment.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = XRTrackSegment.m; sourceTree = "<group>"; };
+		CC6AD88D1AB97933008FFCD3 /* AppKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AppKit.framework; path = System/Library/Frameworks/AppKit.framework; sourceTree = SDKROOT; };
+		CC6AD8921AB98986008FFCD3 /* Utils.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Utils.h; sourceTree = "<group>"; };
+		CC6AD8931AB98986008FFCD3 /* Utils.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Utils.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -32,6 +52,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				CC6AD88E1AB97933008FFCD3 /* AppKit.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -41,6 +62,7 @@
 		CC6AD86B1AB978F5008FFCD3 = {
 			isa = PBXGroup;
 			children = (
+				CC6AD88D1AB97933008FFCD3 /* AppKit.framework */,
 				CC6AD8761AB978F5008FFCD3 /* TraceParser */,
 				CC6AD8751AB978F5008FFCD3 /* Products */,
 			);
@@ -57,6 +79,18 @@
 		CC6AD8761AB978F5008FFCD3 /* TraceParser */ = {
 			isa = PBXGroup;
 			children = (
+				CC6AD8921AB98986008FFCD3 /* Utils.h */,
+				CC6AD8931AB98986008FFCD3 /* Utils.m */,
+				CC6AD87E1AB9791E008FFCD3 /* ImageExport.h */,
+				CC6AD87F1AB9791E008FFCD3 /* ImageExport.m */,
+				CC6AD8801AB9791E008FFCD3 /* PFTTrackSegment.h */,
+				CC6AD8811AB9791E008FFCD3 /* PFTTrackSegment.m */,
+				CC6AD8821AB9791E008FFCD3 /* UIARun.h */,
+				CC6AD8831AB9791E008FFCD3 /* UIARun.m */,
+				CC6AD8841AB9791E008FFCD3 /* XRRun.h */,
+				CC6AD8851AB9791E008FFCD3 /* XRRun.m */,
+				CC6AD8861AB9791E008FFCD3 /* XRTrackSegment.h */,
+				CC6AD8871AB9791E008FFCD3 /* XRTrackSegment.m */,
 				CC6AD8771AB978F5008FFCD3 /* main.m */,
 			);
 			path = TraceParser;
@@ -118,7 +152,13 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				CC6AD88B1AB9791E008FFCD3 /* XRRun.m in Sources */,
+				CC6AD8891AB9791E008FFCD3 /* PFTTrackSegment.m in Sources */,
 				CC6AD8781AB978F5008FFCD3 /* main.m in Sources */,
+				CC6AD8881AB9791E008FFCD3 /* ImageExport.m in Sources */,
+				CC6AD88A1AB9791E008FFCD3 /* UIARun.m in Sources */,
+				CC6AD8941AB98986008FFCD3 /* Utils.m in Sources */,
+				CC6AD88C1AB9791E008FFCD3 /* XRTrackSegment.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -232,6 +272,7 @@
 				CC6AD87D1AB978F5008FFCD3 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
