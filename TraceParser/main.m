@@ -42,9 +42,9 @@ int main(int argc, const char * argv[]) {
         }
         
         for (NSString *zipFile in directoryContents) {
-            NSString *unzipedFile = [Utils unzipFile:[NSString stringWithFormat:@"%@/%@",resultZipDirectory, zipFile]];
+            NSString *unzipedFile = [Utils unzipFile:[NSString stringWithFormat:@"%@/%@", resultZipDirectory, zipFile]];
             if (![unzipedFile isEqualToString:ZIP_FAILED]) {
-                NSString *resultUnzippedFile = [NSString stringWithFormat:@"%@/%@",workihngDic, unzipedFile];
+                NSString *resultUnzippedFile = [NSString stringWithFormat:@"%@/%@", workihngDic, unzipedFile];
                 
                 // Read the trace file into memory
                 NSURL *traceFile = [NSURL fileURLWithPath:[resultUnzippedFile stringByExpandingTildeInPath]];
@@ -52,10 +52,9 @@ int main(int argc, const char * argv[]) {
                 
                 // Deserialize the data and dump its content
                 UIARun *run = [NSUnarchiver unarchiveObjectWithData:traceData];
-                int i = 0;
-                for (NSData *imageData in run.allScreenshotData) {
-                    NSImage *image = [[NSImage alloc] initWithData:imageData];
-                    saveImageAtPath(image, [[NSString stringWithFormat:@"%@/image%d.png", outputFile, i++] stringByExpandingTildeInPath]);
+                for (NSString *imageKey in run.allScreenshotData) {
+                    NSImage *image = [[NSImage alloc] initWithData:run.allScreenshotData[imageKey]];
+                    saveImageAtPath(image, [[NSString stringWithFormat:@"%@/%@.png", outputFile, imageKey] stringByExpandingTildeInPath]);
                 }
             }
         }

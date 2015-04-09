@@ -11,6 +11,6 @@
 
 @interface UIARun : XRRun
 
-@property (nonatomic, strong) NSArray *allScreenshotData;
+@property (nonatomic, strong) NSMutableDictionary *allScreenshotData;
 
 @end

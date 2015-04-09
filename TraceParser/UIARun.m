@@ -21,7 +21,7 @@
 @property (nonatomic, strong) NSMutableDictionary *dictionary2;
 @property (nonatomic, assign) NSInteger integer4;
 @property (nonatomic, strong) NSObject *object1;
-@property (nonatomic, strong) NSMutableDictionary *dictionary3;
+@property (nonatomic, strong) NSMutableDictionary *traceDictionaryLog;
 @property (nonatomic, strong) NSObject *object2;
 @property (nonatomic, strong) NSObject *object3;
 @property (nonatomic, strong) NSMutableDictionary *screenshotDictionary;
@@ -31,7 +31,7 @@
 @implementation UIARun
 
 - (id)initWithCoder:(NSCoder *)decoder {
-//    self = [super init];
+    //    self = [super init];
     if (!self) {
         return nil;
     }
@@ -45,12 +45,19 @@
     self.dictionary2 = [decoder decodeObject];
     self.integer4 = [[decoder decodeObject] integerValue];
     self.object1 = [decoder decodeObject];
-    self.dictionary3 = [decoder decodeObject];
+    self.traceDictionaryLog = [decoder decodeObject];
     self.object2 = [decoder decodeObject];
     self.object3 = [decoder decodeObject];
     self.screenshotDictionary = [decoder decodeObject];
+    self.allScreenshotData = [NSMutableDictionary dictionary];
     //here we have the images
-    self.allScreenshotData = [self.screenshotDictionary allValues];
+    for (NSDictionary *dictionary in self.traceDictionaryLog) {
+        if ([dictionary[@"LogType"] isEqualToString:@"Screenshot"]) {
+            NSString *imageName = dictionary[@"Message"];
+            NSString *keyImageName = dictionary[@"Screenshot"];
+            self.allScreenshotData[imageName] = self.screenshotDictionary[keyImageName];
+        }
+    }
     
     return self;
 }
